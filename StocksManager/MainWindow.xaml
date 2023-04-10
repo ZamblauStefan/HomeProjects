@@ -5,16 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StocksManager"
         mc:Ignorable="d"
-        Title="StocksManager" Height="350" Width="300">
+        Title="StocksManager" Height="400" Width="310">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="img2.jpeg"/>
+            <ImageBrush ImageSource="/Media/img2.jpeg"/>
         </Grid.Background>
-        <TextBlock x:Name="log_in_text" HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="Log in" VerticalAlignment="Top" Height="35" Width="75" TextAlignment="Center" FontSize="20" FontWeight="Bold" IsEnabled="False" FontFamily="Times New Roman"/>
-        <TextBlock x:Name="username_text" HorizontalAlignment="Left" Height="19" Margin="53,106,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="97" TextAlignment="Center" IsEnabled="False" FontSize="14" FontFamily="Times New Roman"/>
-        <TextBlock x:Name="password_text" HorizontalAlignment="Left" Margin="53,178,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="22" Width="97" TextAlignment="Center" FontFamily="Times New Roman" FontSize="14" IsEnabled="False"/>
-        <TextBox x:Name="username_box" HorizontalAlignment="Left" Margin="68,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" FontFamily="Times New Roman"/>
-        <TextBox x:Name="password_box" HorizontalAlignment="Left" Margin="68,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Times New Roman" FontSize="14"/>
+        <TextBlock x:Name="log_in_text" Margin="115,43,0,0" TextWrapping="Wrap" Text="Log in" TextAlignment="Center" FontSize="20" FontWeight="Bold" IsEnabled="False" FontFamily="Times New Roman" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+        <TextBlock x:Name="username_text" Height="19" Margin="53,87,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" TextAlignment="Center" IsEnabled="False" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Left" Width="97"/>
+        <TextBlock x:Name="password_text" Margin="53,145,0,0" TextWrapping="Wrap" Text="Password:" TextAlignment="Center" FontFamily="Times New Roman" FontSize="14" IsEnabled="False" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="97"/>
+        <TextBox x:Name="username_box" Margin="68,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Left" Width="120"/>
+        <TextBox x:Name="password_box" Margin="68,172,0,0" TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="14" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120"/>
+        <Image x:Name="info_img" Height="44" Margin="226,274,0,0" VerticalAlignment="Top" Source="/Media/info1.png" HorizontalAlignment="Left" Width="48"/>
+        <Button x:Name="Log_in_button" Content="" Margin="102,202,0,0" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Width="56">
+            <Button.Background>
+                <ImageBrush ImageSource="/Media/login_button1.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="close_btn" Content="" Margin="72,281,0,0" Height="37" VerticalAlignment="Top" HorizontalAlignment="Left" Width="112">
+            <Button.Background>
+                <ImageBrush ImageSource="/Media/close_button1.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 
 </Window>
