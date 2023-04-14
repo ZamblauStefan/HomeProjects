@@ -14,20 +14,34 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Media/img2.jpeg"/>
         </Grid.Background>
-        <TextBlock x:Name="log_in_text" Margin="115,48,0,0" TextWrapping="Wrap" Text="Log in" TextAlignment="Center" FontSize="20" FontWeight="Bold" IsEnabled="False" FontFamily="Times New Roman" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="80" Height="25" VerticalAlignment="Top"/>
-        <TextBlock x:Name="username_text" Height="19" Margin="53,87,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" TextAlignment="Center" IsEnabled="False" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Left" Width="97"/>
-        <TextBlock x:Name="password_text" Margin="53,145,0,0" TextWrapping="Wrap" Text="Password:" TextAlignment="Center" FontFamily="Times New Roman" FontSize="14" IsEnabled="False" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="97"/>
-        <TextBox x:Name="username_box" Margin="68,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" FontFamily="Times New Roman" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="120" TextChanged="username_box_TextChanged" MaxLength="20"/>
-        <TextBox x:Name="password_box" Margin="68,172,0,0" TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="14" Height="18" VerticalAlignment="Top" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="120" TextChanged="password_box_TextChanged" MaxLength="20"/>
-        <Image x:Name="info_img" Height="44" Margin="74,274,0,0" VerticalAlignment="Top" Source="/Media/info1.png" Grid.Column="1" HorizontalAlignment="Left" Width="48" ToolTip="For more info call tehnical support!"/>
-        <Button x:Name="Log_in_button" Content="" Margin="102,202,0,0" Height="56" VerticalAlignment="Top" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="56" Click="Log_in_button_Click">
+        <TextBlock x:Name="log_in_text" Margin="122,51,0,0" TextWrapping="Wrap" Text="Log in" TextAlignment="Center" FontSize="20" FontWeight="Bold" IsEnabled="False" FontFamily="Times New Roman" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="80" Height="25" VerticalAlignment="Top"/>
+        <TextBlock x:Name="username_text" Height="19" Margin="60,90,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" TextAlignment="Center" IsEnabled="False" FontSize="14" FontFamily="Times New Roman" HorizontalAlignment="Left" Width="97" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="password_text" Margin="60,148,0,0" TextWrapping="Wrap" Text="Password:" TextAlignment="Center" FontFamily="Times New Roman" FontSize="14" IsEnabled="False" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="97" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="username_box" Margin="75,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" FontFamily="Times New Roman" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="120" TextChanged="username_box_TextChanged" MaxLength="20"/>
+        <TextBox x:Name="password_box" Margin="75,175,0,0" TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="14" Height="18" VerticalAlignment="Top" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="120" TextChanged="password_box_TextChanged" MaxLength="20"/>
+        <Image x:Name="info_img" Height="44" Margin="35,267,0,0" VerticalAlignment="Top" Source="/Media/info1.png" Grid.Column="1" HorizontalAlignment="Left" Width="48" ToolTip="For more info call tehnical support!"/>
+        <Button x:Name="Log_in_button" Content="Log In" Margin="55,223,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Click="Log_in_button_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/Media/login_button1.png"/>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF3DFA5A"/>
+                    <GradientStop Color="#FF07CA25" Offset="1"/>
+                </RadialGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="close_btn" Content="" Margin="72,281,0,0" Height="37" VerticalAlignment="Top" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="112" IsCancel="True" Click="OnClickCancel" >
+        <Button x:Name="exit_btn" Content="Exit" Margin="55,279,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" IsCancel="True" Click="OnClickCancel" >
             <Button.Background>
-                <ImageBrush ImageSource="/Media/close_button1.png"/>
+                <RadialGradientBrush>
+                    <GradientStop Color="Red" Offset="0"/>
+                    <GradientStop Color="#FFB23C3C" Offset="1"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="register_button" Grid.Column="1" Content="Register" HorizontalAlignment="Left" Height="20" Margin="17,223,0,0" VerticalAlignment="Top" Width="80" BorderBrush="Black" Click="register_button_Click">
+            <Button.Background>
+                <RadialGradientBrush Opacity="0.5" SpreadMethod="Pad">
+                    <GradientStop Color="#FF0860DE" Offset="0.992"/>
+                    <GradientStop Color="#FF00AFFF" Offset="0.266"/>
+                </RadialGradientBrush>
             </Button.Background>
         </Button>
     </Grid>

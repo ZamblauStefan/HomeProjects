@@ -45,10 +45,16 @@ namespace StocksManager
 
         }
 
+        private void register_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void OnClickCancel(object sender, RoutedEventArgs e)
         {
             App.Current.Shutdown();
         }
+
 
     }
 }
