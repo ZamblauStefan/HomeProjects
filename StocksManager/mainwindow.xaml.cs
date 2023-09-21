@@ -17,11 +17,16 @@ namespace StocksManager
     /// <summary>
     /// Interaction logic for WorkWindow.xaml
     /// </summary>
-    public partial class WorkWindow : Window
+    public partial class MainWindow : Window
     {
-        public WorkWindow()
+        public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
     }
 }
