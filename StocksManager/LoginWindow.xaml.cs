@@ -32,12 +32,12 @@ namespace StocksManager
         //get the username and password needed to access the data base
         private void username_box_TextChanged(object sender, TextChangedEventArgs e)
         {
-            username = username_box.Text;
+            //username = username_box.Text;
         }
 
         private void password_box_TextChanged(object sender, TextChangedEventArgs e)
         {
-            password = password_box.Text;
+            //password = password_box.Text;
         }
 
         private void Log_in_button_Click(object sender, RoutedEventArgs e)
@@ -55,6 +55,13 @@ namespace StocksManager
             App.Current.Shutdown();
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
 
     }
 }

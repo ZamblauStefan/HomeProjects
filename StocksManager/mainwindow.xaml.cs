@@ -19,6 +19,23 @@ namespace StocksManager
     /// </summary>
     public partial class MainWindow : Window
     {
+
+    /*    private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            LogInWindow LoginF = new LogInWindow();
+
+            if (LoginF.ShowDialog().Value)
+            {
+                this.Show();
+             
+            }
+            else
+            {
+                App.Current.Exit();
+            }
+        } */
         public MainWindow()
         {
             InitializeComponent();
@@ -27,6 +44,7 @@ namespace StocksManager
         private void InitializeComponent()
         {
             throw new NotImplementedException();
+
         }
     }
 }

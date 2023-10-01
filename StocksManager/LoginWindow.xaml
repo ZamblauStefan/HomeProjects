@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StocksManager"
         mc:Ignorable="d"
-        Title="StocksManager" Height="400" Width="310">
-    <Grid>
+        Title="StocksManager" Height="400" Width="310"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown">
+
+    <Border>
+        <Border.Background>
+            <ImageBrush ImageSource="/Media/img2.jpeg"
+                        Stretch="Fill">
+
+            </ImageBrush>
+        </Border.Background>
+
+    <Border CornerRadius="50"
+            BorderThickness="3"
+            Opacity="0.3">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2E3192" Offset="0"/>
+                    <GradientStop Color="#1BFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+        
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#2E3192" Offset="0"/>
+                    <GradientStop Color="#1BFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        
+    </Border>
+    </Border>
+        
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="76*"/>
             <ColumnDefinition Width="79*"/>
@@ -44,6 +79,6 @@
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
-    </Grid>
+    </Grid>-->
 
 </Window>

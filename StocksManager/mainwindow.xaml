@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StocksManager"
         mc:Ignorable="d"
-        Title="Work" Height="450" Width="800"
+        Title="StocksManager" Height="450" Width="800"
         WindowState="Maximized">
     <Grid>
-        
+        <Grid HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="34"/>
+        <Grid Height="27" VerticalAlignment="Top" Margin="34,0,0,0"/>
+
     </Grid>
 </Window>
