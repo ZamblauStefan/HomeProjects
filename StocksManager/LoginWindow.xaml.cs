@@ -55,6 +55,16 @@ namespace StocksManager
             App.Current.Shutdown();
         }
 
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if(e.LeftButton == MouseButtonState.Pressed)
@@ -63,5 +73,10 @@ namespace StocksManager
             }
         }
 
+        private void Forgot_Password(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Reset Password");
+        }
+       
     }
 }
