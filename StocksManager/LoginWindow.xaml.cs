@@ -45,7 +45,7 @@ namespace StocksManager
 
         }
 
-        private void register_button_Click(object sender, RoutedEventArgs e)
+        private void Register_button_Click(object sender, RoutedEventArgs e)
         {
         
         }
@@ -73,10 +73,11 @@ namespace StocksManager
             }
         }
 
-        private void Forgot_Password(object sender, RoutedEventArgs e)
+        private void ForgotPassword_LeftMouseDown(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Reset Password");
+            MessageBox.Show("Reset Password","Configuration",MessageBoxButton.OK,MessageBoxImage.Warning);
+            
         }
-       
+
     }
 }
