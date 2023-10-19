@@ -1,8 +1,13 @@
-﻿using System;
+﻿using StocksManager.Models;
+using StocksManager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security;
+using System.Security.Principal;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -13,7 +18,9 @@ namespace StocksManager.ViewModels
         private string _username;
         private SecureString _password;
         private string _errorMessage;
-        private bool _isVisible = true;
+        private bool _isViewVisible = true;
+
+        private IUserRepository userRepository;
 
         //Properties
         public string Username
@@ -54,20 +61,20 @@ namespace StocksManager.ViewModels
             }
         }
 
-        public bool IsVisible
+        public bool IsViewVisible
         {
             get
             {
-                return _isVisible;
+                return _isViewVisible;
             }
             set
             {
-                this._isVisible = value;
-                OnPropertyChanged(nameof(IsVisible));
+                this._isViewVisible = value;
+                OnPropertyChanged(nameof(IsViewVisible));
             }
         }
         //-> Commands
-        public ICommand LogInCommand { get; }
+        public ICommand LoginCommand { get; }
         public ICommand RecoverPasswordCommand { get; }
         public ICommand ShowPasswordCommand { get; }
         public ICommand RememberPasswordCommand { get; }
@@ -75,8 +82,9 @@ namespace StocksManager.ViewModels
         //Constructor
         public LoginViewModel()
         {
-            LogInCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
-            RecoverPasswordCommand = new ViewModelCommand(p =>ExecuteRecoverPasswordCommand("",""));
+            userRepository = new UserRepository();
+            LoginCommand = new ViewModelCommand(ExecuteLoginCommand, CanExecuteLoginCommand);
+            RecoverPasswordCommand = new ViewModelCommand(p=>ExecuteRecoverPasswordCommand("",""));
         }
 
         private void ExecuteRecoverPasswordCommand(string username, string email)
@@ -100,7 +108,17 @@ namespace StocksManager.ViewModels
 
         private void ExecuteLoginCommand(object obj)
         {
-            throw new NotImplementedException();
+            var isValidUser = userRepository.AuthenthicateUser(new NetworkCredential(Username, Password));
+
+            if (isValidUser)
+            {
+                Thread.CurrentPrincipal = new GenericPrincipal(new GenericIdentity(Username), null);
+                IsViewVisible = false;
+            }
+            else
+            {
+                ErrorMessage = "* Invalid username or password!";
+            }
         }
     }
 }

@@ -15,6 +15,6 @@ namespace StocksManager.Models
         void Remove(int id);
         UserModel GetById(int id);
         UserModel GetByUsername(string username);
-        IEnumerable<UserModel> GetBy(string username);
+        IEnumerable<UserModel> GetByAll();
     }
 }

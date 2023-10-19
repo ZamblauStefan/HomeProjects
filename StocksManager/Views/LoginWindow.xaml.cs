@@ -13,41 +13,41 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StocksManager
+namespace StocksManager.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class LogInWindow : Window
+    public partial class LoginWindow : Window
     {
-        public LogInWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }
 
-        
-
-        private string username, password;
+        public string username, password;
 
         //get the username and password needed to access the data base
         private void username_box_TextChanged(object sender, TextChangedEventArgs e)
         {
             //username = username_box.Text;
+            throw new NotImplementedException();
         }
 
         private void password_box_TextChanged(object sender, TextChangedEventArgs e)
         {
             //password = password_box.Text;
+            throw new NotImplementedException();
         }
 
         private void Log_in_button_Click(object sender, RoutedEventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
         private void Register_button_Click(object sender, RoutedEventArgs e)
         {
-        
+            throw new NotImplementedException();
         }
 
         private void OnClickCancel(object sender, RoutedEventArgs e)
@@ -65,9 +65,9 @@ namespace StocksManager
             App.Current.Shutdown();
         }
 
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        public void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }
@@ -75,8 +75,8 @@ namespace StocksManager
 
         private void ForgotPassword_LeftMouseDown(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Reset Password","Configuration",MessageBoxButton.OK,MessageBoxImage.Warning);
-            
+            MessageBox.Show("Reset Password", "Configuration", MessageBoxButton.OK, MessageBoxImage.Warning);
+
         }
 
     }

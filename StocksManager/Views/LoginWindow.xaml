@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StocksManager.Views"
         xmlns:viewModel="clr-namespace:StocksManager.ViewModels" 
         xmlns:customcontrols="clr-namespace:StocksManager.CustomControls"
         mc:Ignorable="d"
@@ -21,11 +22,11 @@
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
     </Window.Resources>
-    
+
     <Window.Visibility>
         <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
     </Window.Visibility>
-    
+
     <Border CornerRadius="15">
         <Border.Background>
             <ImageBrush ImageSource="/Media/img2.jpeg"
@@ -34,7 +35,7 @@
             </ImageBrush>
         </Border.Background>
 
-    <Border CornerRadius="12"
+        <Border CornerRadius="12"
             BorderThickness="5"
             Opacity="0.7">
             <Border.BorderBrush>
@@ -43,19 +44,19 @@
                     <GradientStop Color="#1BFFFF" Offset="1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
-        
+
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
                     <GradientStop Color="#ffa31d" Offset="0"/>
                     <GradientStop Color="#ef5454" Offset="1"/>
                 </LinearGradientBrush>
             </Border.Background>
-        
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"></RowDefinition>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+                </Grid.RowDefinitions>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -81,6 +82,7 @@
                             Cursor="Hand"
                             Grid.Column="1"
                             Click="btnMinimize_Click">
+                        
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="MediumOrchid"/>
@@ -221,7 +223,7 @@
 
 
                     <Button x:Name="btnLogIn"
-                            Command="{Binding LogInCommand}"
+                            Command="{Binding LoginCommand}"
                             BorderThickness="0"
                             Content="Log in"
                             Foreground="Blue"
@@ -323,11 +325,10 @@
                     </Button>
 
                 </StackPanel>
-        
-    </Grid>
-        
-    
-    </Border>
-    </Border>
 
+            </Grid>
+
+
+        </Border>
+    </Border>
 </Window>
