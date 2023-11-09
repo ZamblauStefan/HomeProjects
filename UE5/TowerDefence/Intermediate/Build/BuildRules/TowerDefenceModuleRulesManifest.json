@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\GitRepo\\UE5\\TowerDefence\\Source\\TowerDefence\\TowerDefence.Build.cs",
+		"C:\\GitRepo\\UE5\\TowerDefence\\Source\\TowerDefence.Target.cs",
+		"C:\\GitRepo\\UE5\\TowerDefence\\Source\\TowerDefenceEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}
