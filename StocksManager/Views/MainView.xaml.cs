@@ -12,23 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace StocksManager
+namespace StocksManager.Views
 {
     /// <summary>
     /// Interaction logic for WorkWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
 
 
-        public MainWindow()
+        public MainView()
         {
             InitializeComponent();
         }
 
         private void InitializeComponent()
         {
-            MainWindow mainWindow = new MainWindow();
+            throw new NotImplementedException();
         }
     }
 }

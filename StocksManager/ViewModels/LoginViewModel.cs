@@ -56,7 +56,9 @@ namespace StocksManager.ViewModels
             }
             set
             {
-                this.ErrorMessage = value;
+                
+                
+                _errorMessage = value;
                 OnPropertyChanged(nameof(ErrorMessage));
             }
         }

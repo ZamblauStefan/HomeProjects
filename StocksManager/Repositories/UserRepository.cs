@@ -54,7 +54,39 @@ namespace StocksManager.Repositories
         }
         public UserModel GetByUsername(string username)
         {
-            throw new NotImplementedException();
+            UserModel user = null;
+
+            using (var connection = GetConnection())
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "select * from [Users] where Username =@username";
+                command.Parameters.Add("@username", SqlDbType.NVarChar).Value = username;
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if(reader.Read())
+                    {
+                        user = new UserModel()
+                        {
+                            Id = reader[0].ToString(),
+                            Username = reader[1].ToString(),
+                            Password = string.Empty,
+                            LastName = reader[3].ToString(),
+                            FirstName = reader[4].ToString(),
+                            Email = reader[5].ToString(),
+                            Phone = reader[6].ToString(),
+                            UserType = reader[7].ToString(),
+                            Department = reader[8].ToString(),
+
+                        };
+                    }
+                    
+                }
+            }
+
+            return user;
         }
         public void Remove(int id)
         {
