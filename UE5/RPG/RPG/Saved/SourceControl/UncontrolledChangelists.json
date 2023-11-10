@@ -5,7 +5,18 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/GitRepo/UE5/RPG/RPG/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"C:/GitRepo/UE5/RPG/RPG/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/Locomotion/Idle_Break.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/Locomotion/Walk_Stop.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/Crouched/Crouch_Idle.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/Crouched/Crouh_Walk.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/Locomotion/Locomotion.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/Locomotion/LocomotionBlendspace1D.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/ABP_RPGCharacter.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/Characters/RPG_Character/Animations/Crouched/CrouchedBlendSpace1D.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/ThirdPerson/Input/Actions/IA_Crouch.uasset",
+				"C:/GitRepo/UE5/RPG/RPG/Content/ThirdPerson/Input/IMC_Default.uasset"
 			]
 		}
 	]
