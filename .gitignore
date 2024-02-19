@@ -422,6 +422,9 @@ Build/*/**
 # Don't ignore icon files in Build
 !Build/**/*.ico
 
+#UE5 all uasset files (not sure if it's correct)
+*.uasset
+
 # Built data for maps
 *_BuiltData.uasset
 
